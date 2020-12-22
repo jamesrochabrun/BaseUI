@@ -58,7 +58,7 @@ public final class DiffableCollectionView<SectionIdentifier: DiffableSection,
     }
     
     // MARK:- 2: ViewModels injection and snapshot
-    func applySnapshotWith(_ sections: [SectionIdentifier]) {
+    public func applySnapshotWith(_ sections: [SectionIdentifier]) {
         currentSnapshot = Snapshot()
         currentSnapshot?.appendSections(sections)
         sections.forEach { currentSnapshot?.appendItems($0.viewModels, toSection: $0) }

@@ -32,15 +32,15 @@ open class BaseCollectionViewCell<V>: UICollectionViewCell {
     }
     
     // To be overriden. Super does not need to be called.
-    public func setupSubviews() {
+    open func setupSubviews() {
     }
     
     // To be overriden. Super does not need to be called.
-    public func setupWith(_ viewModel: V) {
+    open func setupWith(_ viewModel: V) {
     }
     
     /// Swift UI
-    public func setupWith(_ viewModel: V, parent: UIViewController?) {
+    open func setupWith(_ viewModel: V, parent: UIViewController?) {
         
     }
 }

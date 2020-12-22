@@ -10,7 +10,7 @@ import UIKit
 // MARK:-  Generic Collectionview cell
 open class BaseCollectionViewCell<V>: UICollectionViewCell {
     
-    var viewModel: V? {
+    public var viewModel: V? {
         didSet {
             guard let viewModel = viewModel else { return }
             setupWith(viewModel)
@@ -32,15 +32,15 @@ open class BaseCollectionViewCell<V>: UICollectionViewCell {
     }
     
     // To be overriden. Super does not need to be called.
-    func setupSubviews() {
+    public func setupSubviews() {
     }
     
     // To be overriden. Super does not need to be called.
-    func setupWith(_ viewModel: V) {
+    public func setupWith(_ viewModel: V) {
     }
     
     /// Swift UI
-    func setupWith(_ viewModel: V, parent: UIViewController?) {
+    public func setupWith(_ viewModel: V, parent: UIViewController?) {
         
     }
 }

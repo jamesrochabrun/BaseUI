@@ -11,7 +11,6 @@ import UIKit
 public protocol DiffableSection: Hashable {
     associatedtype DiffableViewModel: Hashable
     var viewModels: [DiffableViewModel] { get }
-    init(viewModels: [DiffableViewModel])
 }
 
 @available(iOS 13, *)
@@ -38,7 +37,7 @@ public final class DiffableCollectionView<SectionIdentifier: DiffableSection,
     private weak var parent: UIViewController?
     
     // MARK:- Life Cycle
-    convenience init(layout: UICollectionViewLayout, parent: UIViewController?) {
+    convenience public init(layout: UICollectionViewLayout, parent: UIViewController?) {
         self.init()
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView?.register(CellType.self)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class BaseXibView: UIView {
+open class BaseXibView: UIView {
     
     /// Override  this property when your xib file in the bundle does not match the syntax  of your class.
     /// Most likely if you use this class with generic constraints.
@@ -19,7 +19,7 @@ public class BaseXibView: UIView {
         setUpViews()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setupXib()
     }

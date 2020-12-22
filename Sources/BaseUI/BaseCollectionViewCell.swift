@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK:-  Generic Collectionview cell
-public class BaseCollectionViewCell<V>: UICollectionViewCell {
+open class BaseCollectionViewCell<V>: UICollectionViewCell {
     
     var viewModel: V? {
         didSet {

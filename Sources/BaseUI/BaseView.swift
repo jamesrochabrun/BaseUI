@@ -7,14 +7,14 @@
 
 import UIKit
 
-public class BaseView: UIView {
+open class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         setupViews()
     }

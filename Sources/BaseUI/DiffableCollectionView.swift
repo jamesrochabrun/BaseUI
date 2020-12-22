@@ -8,14 +8,14 @@
 import UIKit
 
 
-protocol DiffableSection: Hashable {
+public protocol DiffableSection: Hashable {
     associatedtype DiffableViewModel: Hashable
     var viewModels: [DiffableViewModel] { get }
     init(viewModels: [DiffableViewModel])
 }
 
 @available(iOS 13, *)
-final class DiffableCollectionView<SectionIdentifier: DiffableSection,
+public final class DiffableCollectionView<SectionIdentifier: DiffableSection,
                                                    CellType: BaseCollectionViewCell<SectionIdentifier.DiffableViewModel>>: BaseView, UICollectionViewDelegate {
     
     
@@ -67,7 +67,7 @@ final class DiffableCollectionView<SectionIdentifier: DiffableSection,
     }
     
     // MARK:- UICollectionViewDelegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let viewModel = dataSource?.itemIdentifier(for: indexPath) else { return }
         selectedContentAtIndexPath?(viewModel, indexPath)
     }

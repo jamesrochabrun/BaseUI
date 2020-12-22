@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK:-  Generic Collectionview cell
-class BaseCollectionViewCell<V>: UICollectionViewCell {
+public class BaseCollectionViewCell<V>: UICollectionViewCell {
     
     var viewModel: V? {
         didSet {
@@ -26,7 +26,7 @@ class BaseCollectionViewCell<V>: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.setupSubviews()
     }

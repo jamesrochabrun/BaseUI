@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol CollectionReusable {}
+public protocol CollectionReusable {}
 
 /// Disclaimer: From Apple UI engineer - its allow to force cast the cell in this method, if it fails its mostly another issue in the implementation.
 
 
 /// MARK:- UITableView
-extension CollectionReusable where Self: UITableViewCell  {
+public extension CollectionReusable where Self: UITableViewCell  {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
@@ -21,7 +21,7 @@ extension CollectionReusable where Self: UITableViewCell  {
 
 extension UITableViewCell: CollectionReusable {}
 
-extension UITableView {
+public extension UITableView {
     
     /// Register Programatic Cell
     func register<T: UITableViewCell>(_ :T.Type) {
@@ -62,13 +62,13 @@ extension UITableView {
 
 
 /// MARK:- UICollectionView
-extension CollectionReusable where Self: UICollectionViewCell {
+public extension CollectionReusable where Self: UICollectionViewCell {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
 }
 
-extension UICollectionView {
+public extension UICollectionView {
     
     /// Register Programatic Cell
     func register<T: UICollectionViewCell>(_ :T.Type) {
@@ -105,7 +105,7 @@ extension UICollectionView {
 }
 
 /// MARK:- UICollectionView
-extension CollectionReusable where Self: UICollectionReusableView {
+public extension CollectionReusable where Self: UICollectionReusableView {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
@@ -115,7 +115,7 @@ extension UICollectionReusableView: CollectionReusable {}
 
 
 /// MARK:- TableView
-extension CollectionReusable where Self: UITableViewHeaderFooterView {
+public extension CollectionReusable where Self: UITableViewHeaderFooterView {
     static var reuseIdentifier: String {
         return String(describing: self)
     }

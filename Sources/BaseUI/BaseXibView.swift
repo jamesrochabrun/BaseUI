@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseXibView: UIView {
+public class BaseXibView: UIView {
     
     /// Override  this property when your xib file in the bundle does not match the syntax  of your class.
     /// Most likely if you use this class with generic constraints.
